@@ -78,7 +78,6 @@
     font-weight: 400;
 }
 
-
 .button>.glyphicon {
 	text-shadow: none;
 }
@@ -86,25 +85,42 @@
 .content-section-a {
     padding: 50px 0;
 	background-color:rgba(0,0,0,0.9);
-	color: #777777;
+	color: white;
 }
 
 .content-section-b {
     padding: 50px 0;
     /*border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;*/
-	color: #dddddd;
+	color: white;
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
+}
+
+.content-section-b .section-heading-spacer {
+  float: left;
+  width: 200px;
+  border-top: 3px solid white;
+}
+
+.content-section-c {
+  padding: 50px 0;
+  background-color: white;
+}
+
+.content-section-c .section-heading {
+    margin-bottom: 30px;
+    color: black;
 }
 
 .section-heading {
     margin-bottom: 30px;
+    color: white;
 }
 
 .section-heading-spacer {
     float: left;
     width: 200px;
-    border-top: 3px solid #e7e7e7;
+    border-top: 3px solid red;
 }
 
 .panel.facebook-panel {
