@@ -105,10 +105,11 @@
 }
 
 .panel.facebook-panel {
-	width: 430px;
+	padding: 1px;
+	width: 414px;
 }
 
-@media(max-width:430px) {
+@media(max-width:414px) {
 	.panel.facebook-panel {
 		width: 100%;
 		overflow: auto;
