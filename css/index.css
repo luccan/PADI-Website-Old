@@ -4,15 +4,29 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-.carousel-control{
-	opacity: 0;
+/* overflows to prevent modal from making scrollbar disappear and causing background to shift */
+.modal {
+ overflow-y: auto;
+}
+.modal-open {
+ overflow: auto;
+}
+.modal-open[style] {
+	padding-right: 0px !important;
 }
 
-.carousel-caption{
-	position: relative;
-    left: auto;
-    right: auto;
+.modal-body {
+	padding: 0px;
 }
+
+.modal-content {
+	/*border-color:rgba(255,255,255,1);*/
+}
+
+.modal-header {
+	background-color:rgba(0,0,0,0.8);
+}
+/* end modal */
 
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
@@ -36,6 +50,10 @@
     border-bottom: 1px solid rgba(0,0,0,0.2);*/
 }
 
+.intro-header h3 {
+	font: 30px SWScrps;
+}
+
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
@@ -46,35 +64,21 @@
     }
 }
 
+.carousel-control{
+	opacity: 0;
+}
+
+.carousel-caption{
+	position: relative;
+    left: auto;
+    right: auto;
+}
+
 .lead {
     font-size: 18px;
     font-weight: 400;
 }
 
-/* overflows to prevent modal from making scrollbar disappear and causing background to shift */
-.modal {
- overflow-y: auto;
-}
-.modal-open {
- overflow: auto;
-}
-.modal-open[style] {
-	padding-right: 0px !important;
-}
-
-.modal-body {
-	padding: 0px;
-}
-
-.modal-content {
-	/*border-color:rgba(255,255,255,1);*/
-}
-
-.modal-header {
-	background-color:rgba(0,0,0,0.8);
-}
-
-/* end modal */
 
 .button>.glyphicon {
 	text-shadow: none;
@@ -107,6 +111,7 @@
 .panel.facebook-panel {
 	padding: 1px;
 	width: 414px;
+	border-color: grey;
 }
 
 @media(max-width:444px) {
@@ -129,12 +134,3 @@
     margin: 0;
     font-size: 2em;
 }
-
-@media(max-width:767px) {
-    .banner h3 {
-        margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 2em;
-    }
-}
-
