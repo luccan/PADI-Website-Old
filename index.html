@@ -219,7 +219,7 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Manusia</h2>
-                    <p class="lead">Meet the people behind PADI and find out what our aspirations are.</p>
+                    <p class="lead">Meet the people behind PADI and find out what <a href="#" id="mission-toggle">our aspirations</a> are.</p>
                 </div>
                 <div class="col-md-7">
                     <img class="img-responsive" src="./img/team.jpg" alt="team2015">
@@ -232,8 +232,8 @@
     </div>
     <!-- /.content-section-a -->
 
-    <a  name="mission"></a>
-      <div class="content-section-c">
+    <a name="mission"></a>
+      <div id="mission-content" class="content-section-c">
 
           <div class="container">
               <div class="row">
@@ -325,7 +325,16 @@
     <script src="./js/bootstrap.min.js"></script>
 
 	<script src="https://www.facebook.com/assets.php/en_US/sdk.js"></script>
-
+	
+	<!--animation scripts-->
+	<script>
+		$("#mission-content").hide();
+		document.getElementById("mission-toggle").onclick = function(){
+			$("#mission-content").slideToggle("slow");
+		  return false; //disable href navigation
+		};
+	</script>
+	
 </body>
 
 </html>
