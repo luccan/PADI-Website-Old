@@ -4,65 +4,38 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
- @import url(http://fonts.googleapis.com/css?family=Dancing+Script);
- 
+/* Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script);
+
 /* overflows to prevent modal from making scrollbar disappear and causing background to shift */
-.modal {
- overflow-y: auto;
-}
-.modal-open {
- overflow: auto;
-}
-.modal-open[style] {
-	padding-right: 0px !important;
-}
-
-.modal-body {
-	padding: 0px;
-}
-
-.modal-content {
-	/*border-color:rgba(255,255,255,1);*/
-}
-
-.modal-header {
-	background-color:rgba(0,0,0,0.8);
-}
-/* end modal */
+.modal { overflow-y: auto; }
+.modal-open { overflow: auto; }
+.modal-open[style] { padding-right: 0px !important; }
+.modal-body { padding: 0px; }
+.modal-header { background-color: black; }
 
 .intro-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
-    text-align: center;
-    color: #f8f8f8;
-    /*background-size: cover;*/
+  padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom: 50px;
+  text-align: center;
+  color: #f8f8f8;
+  /*background-size: cover;*/
 }
 
 .intro-message {
-    position: relative;
-    padding-top: 5%;
-    padding-bottom: 10%;
+  position: relative;
+  padding-top: 5%;
+  padding-bottom: 10%;
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
 }
 
-.intro-divider {
-    width: 400px;
-    /*border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);*/
-}
+.intro-divider { width: 25vw; }
+.intro-header h3 { font: 30px 'Dancing Script'; }
 
-.intro-header h3 {
-	font: 30px 'Dancing Script';
-}
-
+/*ipad screens*/
 @media(max-width:767px) {
-    .intro-message {
-        padding-bottom: 15%;
-    }
-
-    .intro-divider {
-        width: 100%;
-    }
+  .intro-message { padding-bottom: 15%; }
+  .intro-divider { width: 100%; }
 }
 
 .carousel-control{
@@ -71,13 +44,13 @@
 
 .carousel-caption{
 	position: relative;
-    left: auto;
-    right: auto;
+  left: auto;
+  right: auto;
 }
 
 .lead {
-    font-size: 18px;
-    font-weight: 400;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .button>.glyphicon {
@@ -85,15 +58,13 @@
 }
 
 .content-section-a {
-    padding: 50px 0;
+  padding: 50px 0;
 	background-color:rgba(0,0,0,0.9);
 	color: white;
 }
 
 .content-section-b {
-    padding: 50px 0;
-    /*border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;*/
+  padding: 50px 0;
 	color: white;
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
 }
@@ -110,8 +81,8 @@
 }
 
 .content-section-c .section-heading {
-    margin-bottom: 30px;
-    color: black;
+  margin-bottom: 30px;
+  color: black;
 }
 
 .content-section-d {
@@ -122,14 +93,14 @@
 }
 
 .section-heading {
-    margin-bottom: 30px;
-    color: white;
+  margin-bottom: 30px;
+  color: white;
 }
 
 .section-heading-spacer {
-    float: left;
-    width: 200px;
-    border-top: 3px solid red;
+  float: left;
+  width: 200px;
+  border-top: 3px solid red;
 }
 
 .panel.facebook-panel {
@@ -138,6 +109,7 @@
 	border-color: grey;
 }
 
+/*iphone screens*/
 @media(max-width:445px) {
 	.panel.facebook-panel {
 		width: 100%;
@@ -146,15 +118,15 @@
 }
 
 .banner {
-    padding: 100px 0;
-    color: #dddddd;
+  padding: 100px 0;
+  color: #dddddd;
 	background-color:rgba(0,0,0,0.3);
-    background: url(../img/background-contactus.jpg) no-repeat center center;
-    background-size: cover;
+  background: url(../img/background-contactus.jpg) no-repeat center center;
+  background-size: cover;
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
 }
 
 .banner h3 {
-    margin: 0;
-    font-size: 2em;
+  margin: 0;
+  font-size: 2em;
 }
