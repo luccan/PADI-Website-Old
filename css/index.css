@@ -1,3 +1,9 @@
+/*!
+ * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
 /* Google Fonts */
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script);
 
@@ -57,7 +63,7 @@
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
 }
 
-.content-section-b .section-heading-spacer {
+.content-section-b .section-heading-spacer, .content-section-d .section-heading-spacer {
   float: left;
   width: 200px;
   border-top: 3px solid white;
@@ -65,12 +71,19 @@
 
 .content-section-c {
   padding: 50px 0;
-  background-color: white;
+  background-color: rgba(255,255,255,0.9);
 }
 
 .content-section-c .section-heading {
   margin-bottom: 30px;
   color: black;
+}
+
+.content-section-d {
+    padding: 50px 0;
+    color: white;
+	background-color:rgba(165,200,200,0.7);
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
 }
 
 .section-heading {
