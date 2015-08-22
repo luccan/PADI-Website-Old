@@ -1,7 +1,7 @@
 /* Google Fonts */
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script);
 
-/* overflows to prevent modal from making scrollbar disappear and causing background to shift */
+/* overflows is to allow background to move and to prevent modal from making scrollbar disappear */
 .modal { overflow-y: auto; }
 .modal-open { overflow: auto; }
 .modal-open[style] { padding-right: 0px !important; }
@@ -25,12 +25,6 @@
 
 .intro-divider { width: 25vw; }
 .intro-header h3 { font: 30px 'Dancing Script'; }
-
-/*ipad screens*/
-@media(max-width:767px) {
-  .intro-message { padding-bottom: 15%; }
-  .intro-divider { width: 100%; }
-}
 
 .carousel-control{
 	opacity: 0;
