@@ -104,7 +104,7 @@
 }
 
 /*iphone screens*/
-@media(max-width:445px) {
+@media(max-width:480px) {
 	.panel.facebook-panel {
 		width: 100%;
 		overflow: auto;
