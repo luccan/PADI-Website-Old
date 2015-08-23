@@ -49,38 +49,23 @@
 }
 
 .content-section-a {
-  padding: 50px 0;
-	background-color:rgba(0,0,0,0.9);
+  padding: 70px 0;
+	background-color:rgba(0,0,0,0.7);
 	color: white;
+}
+
+.content-section-a.community {
+  padding-bottom: 10px;
 }
 
 .content-section-b {
-  padding: 50px 0;
-	color: white;
-	text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
+  padding: 70px 0;
+  background-color: rgba(255,255,255,0.7);
 }
 
-.content-section-b .section-heading-spacer, .content-section-d .section-heading-spacer {
-  float: left;
-  width: 200px;
-  border-top: 3px solid white;
-}
-
-.content-section-c {
-  padding: 50px 0;
-  background-color: rgba(255,255,255,0.9);
-}
-
-.content-section-c .section-heading {
+.content-section-b .section-heading {
   margin-bottom: 30px;
   color: black;
-}
-
-.content-section-d {
-  padding: 50px 0;
-  color: white;
-	background-color:rgba(165,200,200,0.7);
-	text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
 }
 
 .section-heading {
