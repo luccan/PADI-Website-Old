@@ -4,9 +4,6 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/* Google Fonts */
-@import url(http://fonts.googleapis.com/css?family=Dancing+Script);
-
 /* overflows is to allow background to move and to prevent modal from making scrollbar disappear */
 .modal { overflow-y: auto; }
 .modal-open { overflow: auto; }
@@ -44,7 +41,7 @@
 
 .lead {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .button>.glyphicon {
@@ -80,8 +77,8 @@
 }
 
 .content-section-d {
-    padding: 50px 0;
-    color: white;
+  padding: 50px 0;
+  color: white;
 	background-color:rgba(165,200,200,0.7);
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
 }
@@ -89,6 +86,8 @@
 .section-heading {
   margin-bottom: 30px;
   color: white;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .section-heading-spacer {
