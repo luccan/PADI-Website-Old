@@ -12,7 +12,7 @@
     <link rel="SHORTCUT ICON" href="./img/favicon.ico">
 
     <!-- Bootstrap Core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="./css/navbar-template.css" rel="stylesheet">
@@ -61,7 +61,7 @@
 			</div>
 			<!-- /.container -->
 		</nav>
-		
+
 		<!-- Wrapper -->
 		<div id="wrapper">
 			<!-- Sidebar -->
@@ -78,10 +78,10 @@
 				</ul>
 			</div>
 			<!-- /#sidebar-wrapper -->
-  
+
 			<!-- Page Content -->
 			<div id="page-content-wrapper">
-	
+
 				<iframe id="content" src="./about-us/2015.html" onload="javascript:resizeIframe();"></iframe>
 
 				<!-- Footer -->
@@ -94,23 +94,23 @@
 					</div>
 				  </div>
 				</footer>
-			
+
 			</div>
 			<!-- /#page-content-wrapper -->
-			
+
 		</div>
 		<!--/#wrapper-->
 
 		<!-- jQuery -->
 		<script src="./js/jquery.min.js"></script>
-		
+
 		<script>
 			//Menu Toggle Script
 			$("#sidebar-toggle").click(function(e) {
 				e.preventDefault();
 				$("#wrapper").toggleClass("toggled");
 			});
-			
+
 			//Iframe fit content Script
 			function resizeIframe() {
 				var obj = document.getElementById("content");
