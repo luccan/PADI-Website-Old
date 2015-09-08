@@ -29,6 +29,10 @@
 .intro-divider { width: 25vw; }
 .intro-header h3 { font: 30px 'Dancing Script'; }
 
+.container a {
+  color: red;
+}
+
 .carousel-control{
 	opacity: 0;
 }
@@ -37,10 +41,6 @@
 	position: relative;
   left: auto;
   right: auto;
-}
-
-.carousel-photo {
-  padding: 0 50px;
 }
 
 .lead {
