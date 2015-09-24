@@ -75,8 +75,18 @@
 			<div id="sidebar-wrapper">
 				<ul class="sidebar-nav">
 					<!--li class="sidebar-brand"><a href="#">Start Bootstrap</a></li-->
-					<li><a href="?content=2016">2016 Excos</a></li>
-					<li><a href="?content=2015">2015 Excos</a></li>
+					<li>
+						<a href="#" data-toggle="collapse" data-target="#sidebar-collapse-2015">2015 Events</a>
+						<ul id="sidebar-collapse-2015" class="collapse">
+                            <li><a href="?folder=2015&content=freshmore-bbq">Freshmore Bbq</a></li>
+                        </ul>
+					</li>
+					<li>
+						<a href="#" data-toggle="collapse" data-target="#sidebar-collapse-2014">2014 Events</a>
+						<ul id="sidebar-collapse-2014" class="collapse">
+                            <li><a href="?folder=2014&content=batik-day">Batik Day</a></li>
+                        </ul>
+					</li>
 				</ul>
 			</div>
 			<!-- /#sidebar-wrapper -->
@@ -135,11 +145,12 @@
 						params[nv[0]] = nv[1] || true;
 					}
 				}
-				if (typeof params.content === "undefined"){
+				if (typeof params.folder === "undefined" || typeof params.content === "undefined"){
 					//default
-					params.content = "2015"
+					params.folder = "2014"
+					params.content = "batik-day"
 				}
-				loadFrame("about-us/" + params.content + ".html");
+				loadFrame("events/" + params.folder + "/" + params.content + ".html");
 			});
 		</script>
 
