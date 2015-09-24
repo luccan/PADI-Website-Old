@@ -72,6 +72,7 @@ iframe{
 
     #page-content-wrapper {
         padding: 0px;
+		margin-right: 0px;
         position: relative;
     }
 }
