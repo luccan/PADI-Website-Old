@@ -81,8 +81,15 @@
 
 			<!-- Page Content -->
 			<div id="page-content-wrapper">
-				
-				<iframe id="content" src="./about-us/2015.html" onload="javascript:resizeIframe();"></iframe>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<!--iframe id="content" src="./about-us/2015.html" onload="javascript:resizeIframe();"></iframe-->
+							<div id="content"></div>
+						</div>
+					</div>
+				</div>
+							
 
 				<!-- Footer -->
 				<footer>
@@ -117,6 +124,15 @@
 				obj.style.height = String(parseInt(obj.contentWindow.document.body.scrollHeight)+25) + 'px'; //add extra to make scrollbar disappear
 				obj.style.width = String(parseInt(obj.contentWindow.document.body.scrollWidth)+25) + 'px';
 			}
+			
+			function loadFrame(url){
+				$.get("about-us/2015.html", function( data ) {
+				  $("#content").html( data );
+				});
+			}
+			$( document ).ready(function() {
+				loadFrame("");
+			});
 		</script>
 
 		<!-- Bootstrap Core JavaScript -->
