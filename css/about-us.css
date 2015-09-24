@@ -53,6 +53,7 @@ iframe{
     width: 100%;
     position: absolute;
     padding: 0px;
+	color: white;
 }
 
 #wrapper.toggled #page-content-wrapper {
