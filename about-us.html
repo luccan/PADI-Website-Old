@@ -9,7 +9,7 @@
     <meta name="author" content="SUTD PADI inc.">
 
     <title>PADI</title>
-    <link rel="SHORTCUT ICON" href="./img/favicon.ico">
+    <link rel="SHORTCUT ICON" href="./img/shortcut-logo.ico">
 
     <!-- Bootstrap Core CSS -->
     <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -114,7 +114,7 @@
 			//Iframe fit content Script
 			function resizeIframe() {
 				var obj = document.getElementById("content");
-				obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+				obj.style.height = String(parseInt(obj.contentWindow.document.body.scrollHeight)+25) + 'px';
 			}
 		</script>
 
