@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +20,8 @@
     <link href="./css/about-us.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
+	<link href="./css/fonts.css" rel="stylesheet">
+	
 </head>
 
 	<body>
@@ -37,24 +40,24 @@
 						<span class="sr-only">Toggle sidebar</span>
 						<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
 					</button>
-					<a class="navbar-brand topnav" href="#home"><img style="margin: -9px 0" src="./img/logo.png" alt="logo"></img></a>
+					<a class="navbar-brand topnav" href="./index.html#home"><img style="margin: -9px 0" src="./img/logo.png" alt="logo"></img></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#about">About Us</a></li>
+						<li><a href="./index.html#about">About Us</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-header">Featured Events</li>
-								<li><a href="#events">Saman Dance</a></li>
+								<li><a href="./index.html#events">Saman Dance</a></li>
 								<li role="separator" class="divider"></li>
 								<li><a href="#">All Events</a></li>
 							</ul>
 						</li>
-						<li><a href="#warung">Warung</a></li>
-						<li><a href="#manusia">Our Team</a></li>
-						<li><a href="#contact">Contact Us</a></li>
+						<li><a href="./index.html#warung">Warung</a></li>
+						<li><a href="./index.html#manusia">Our Team</a></li>
+						<li><a href="./index.html#contact">Contact Us</a></li>
 					</ul>
 				</div>
 				<!-- /.navbar-collapse -->
@@ -68,32 +71,23 @@
 			<div id="sidebar-wrapper">
 				<ul class="sidebar-nav">
 					<li class="sidebar-brand"><a href="#">Start Bootstrap</a></li>
-					<li><a href="#">Dashboard</a></li>
-					<li><a href="#">Shortcuts</a></li>
-					<li><a href="#">Overview</a></li>
-					<li><a href="#">Events</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="?content=2016">2016 Excos</a></li>
+					<li><a href="?content=2015">2015 Excos</a></li>
 				</ul>
 			</div>
 			<!-- /#sidebar-wrapper -->
 
 			<!-- Page Content -->
 			<div id="page-content-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<!--iframe id="content" src="./about-us/2015.html" onload="javascript:resizeIframe();"></iframe-->
-							<div id="content"></div>
-						</div>
-					</div>
+				
+				<div class="container-fluid">
+				<br/>
+					<div id="content"></div>
 				</div>
-							
 
 				<!-- Footer -->
 				<footer>
-				  <div class="container">
+				  <div class="container-fluid">
 					<div class="row">
 						<div class="col-lg-12">
 							<p class="copyright text-muted small">Copyright &copy; PADI Inc. 2015 All Rights Reserved</p>
@@ -117,21 +111,31 @@
 				e.preventDefault();
 				$("#wrapper").toggleClass("toggled");
 			});
-
-			//Iframe fit content Script
-			function resizeIframe() {
-				var obj = document.getElementById("content");
-				obj.style.height = String(parseInt(obj.contentWindow.document.body.scrollHeight)+25) + 'px'; //add extra to make scrollbar disappear
-				obj.style.width = String(parseInt(obj.contentWindow.document.body.scrollWidth)+25) + 'px';
-			}
 			
+			//AJAX call load frame for content
 			function loadFrame(url){
-				$.get("about-us/2015.html", function( data ) {
+				$.get(url, function( data ) {
 				  $("#content").html( data );
 				});
 			}
 			$( document ).ready(function() {
-				loadFrame("");
+				//Read Query Param
+				var params = {};
+
+				if (location.search) {
+					var parts = location.search.substring(1).split('&');
+
+					for (var i = 0; i < parts.length; i++) {
+						var nv = parts[i].split('=');
+						if (!nv[0]) continue;
+						params[nv[0]] = nv[1] || true;
+					}
+				}
+				if (typeof params.content === "undefined"){
+					//default
+					params.content = "2015"
+				}
+				loadFrame("about-us/" + params.content + ".html");
 			});
 		</script>
 
