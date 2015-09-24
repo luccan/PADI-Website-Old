@@ -114,7 +114,8 @@
 			//Iframe fit content Script
 			function resizeIframe() {
 				var obj = document.getElementById("content");
-				obj.style.height = String(parseInt(obj.contentWindow.document.body.scrollHeight)+25) + 'px';
+				obj.style.height = String(parseInt(obj.contentWindow.document.body.scrollHeight)+25) + 'px'; //add extra to make scrollbar disappear
+				obj.style.width = String(parseInt(obj.contentWindow.document.body.scrollWidth)+25) + 'px';
 			}
 		</script>
 
