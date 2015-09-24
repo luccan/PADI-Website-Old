@@ -86,8 +86,12 @@
 			<div id="page-content-wrapper">
 				
 				<div class="container-fluid">
-					<!--iframe id="content" src="./about-us/2015.html" onload="javascript:resizeIframe();"></iframe-->
-					<div id="content"></div>
+					<div class="row">
+						<div class="col-lg-12">
+							<!--iframe id="content" src="./about-us/2015.html" onload="javascript:resizeIframe();"></iframe-->
+							<div id="content"></div>
+						</div>
+					</div>
 				</div>
 
 				<!-- Footer -->
@@ -116,14 +120,8 @@
 				e.preventDefault();
 				$("#wrapper").toggleClass("toggled");
 			});
-
-			//Iframe fit content Script
-			function resizeIframe() {
-				var obj = document.getElementById("content");
-				obj.style.height = String(parseInt(obj.contentWindow.document.body.scrollHeight)+25) + 'px'; //add extra to make scrollbar disappear
-				obj.style.width = String(parseInt(obj.contentWindow.document.body.scrollWidth)+25) + 'px';
-			}
 			
+			//AJAX call load frame for content
 			function loadFrame(url){
 				$.get("about-us/2015.html", function( data ) {
 				  $("#content").html( data );
