@@ -50,6 +50,7 @@ iframe{
 }
 
 #page-content-wrapper {
+	height: 100%;
     width: 100%;
     position: absolute;
     padding: 0px;
@@ -63,19 +64,22 @@ iframe{
 
 /* No toggling in Full Screen Desktop Mode */
 @media(min-width:768px) {
-    #wrapper {
+    #wrapper, #wrapper.toggled {
         padding-left: 250px;
     }
 
-    #sidebar-wrapper {
+    #wrapper.toggled #sidebar-wrapper, #sidebar-wrapper {
         width: 250px;
     }
 
-    #page-content-wrapper {
-        padding: 0px;
+    #wrapper.toggled #page-content-wrapper, #page-content-wrapper {
 		margin-right: 0px;
         position: relative;
     }
+	
+	.sidebar-toggle{
+		display: none;
+	}
 }
 
 /* Sidebar Styles */
@@ -129,4 +133,11 @@ iframe{
 .sidebar-toggle {
     padding: 8px 14px 4px 14px;
 	color: #888;
+}
+
+footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
