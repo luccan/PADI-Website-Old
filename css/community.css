@@ -74,6 +74,7 @@ iframe{
 
     #wrapper.toggled #page-content-wrapper, #page-content-wrapper {
 		margin-right: 0px;
+		position: relative;
     }
 	
 	.sidebar-toggle{
