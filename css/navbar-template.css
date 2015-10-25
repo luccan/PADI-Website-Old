@@ -25,6 +25,10 @@ body, h1, h2, h3, h4, h5, h6{
   text-transform: uppercase;
 }
 
+.nav>li{
+	text-align: right;
+}
+
 .navbar-default .navbar-nav li a { color: white; }
 .navbar-default .navbar-nav li a:hover { color: red; }
 .navbar-default .navbar-nav li a:focus { color: red; }
@@ -40,7 +44,12 @@ body, h1, h2, h3, h4, h5, h6{
 }
 
 /* dropdown item color*/
-.navbar-nav>li>.dropdown-menu>li>a { color: black; }
+.navbar-nav>li>.dropdown-menu>li {
+	text-align: right;
+}
+.navbar-nav>li>.dropdown-menu>li>a {
+	color: black;
+}
 
 footer {
   padding: 20px 0;
